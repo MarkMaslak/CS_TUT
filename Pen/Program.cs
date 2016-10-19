@@ -52,44 +52,6 @@ namespace Pen
     }
 
 
-    public static class Extensions
-    {
-        public static void Raise<T>(this System.EventHandler<T> evento, object sender, T args) where T : EventArgs
-        {
-            var handler = evento;
-
-            if (handler != null)
-                handler(sender, args);
-        }
-    }
-
-    /// <summary>
-    /// Pen event arguments. Inherits from <see cref="EventArgs"/> class.
-    /// </summary>
-    public class PenEventArgs : EventArgs
-    {
-        /// <summary>
-        /// Pen event arguments. Inherits from <see cref="EventArgs"/> class.
-        /// </summary>
-        /// <param name="cana"></param>
-        public PenEventArgs(int cana)
-        {
-            Cana = cana;
-        }
-
-        public readonly int Cana;
-    }
-
-
-    public class Coche
-    {
-        public event EventHandler<EventArgs> NueumaticoCambiado;
-
-        public void CambioNeumatico()
-        {
-            NueumaticoCambiado.Raise(this, new EventArgs());
-        }
-    }
 
 
  
