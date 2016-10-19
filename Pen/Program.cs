@@ -95,6 +95,9 @@ namespace Pen
     public class Pen
     {
 
+        /// <summary>
+        /// Event informs that cana changed. Event of <see cref="Pen"/> class.
+        /// </summary>
         public event EventHandler<PenEventArgs> CanaCambiada;
 
 
