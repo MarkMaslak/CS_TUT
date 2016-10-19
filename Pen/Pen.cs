@@ -23,6 +23,8 @@ namespace Pen
 
 
         private int _cana;
+
+
         public int Cana
         {
             get { return _cana; }
